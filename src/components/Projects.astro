@@ -1,0 +1,68 @@
+---
+import GitHub from "../icons/GitHub.astro"
+import NextJS from "../icons/NextJS.astro"
+import Tailwind from "../icons/Tailwind.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+}
+
+const PROJECTS = [
+  {
+    title: "Software de Mantenimiento Empresarial",
+    description: "Desarrollo de un software integral para la gestión y mantenimiento de operaciones empresariales. Incluye funcionalidades para el seguimiento de tareas, gestión de recursos y análisis de rendimiento. Implementado con tecnologías modernas y arquitectura robusta.",
+    link: "https://example.com/software-mantenimiento",
+    github: "https://github.com/manniealfaro/software-mantenimiento",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
+  },
+  {
+    title: "Plataforma de Gestión de Stock Empresarial",
+    description: "Desarrollo de una plataforma para la gestión eficiente del inventario empresarial. Incluye funcionalidades para el seguimiento de stock, generación de reportes y optimización de la cadena de suministro. Construida utilizando tecnologías escalables y seguras.",
+    link: "https://example.com/plataforma-gestión-stock",
+    github: "https://github.com/manniealfaro/plataforma-gestion-stock",
+    image: "/projects/adventjs.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
+  },
+  {
+    title: "Librería OOP en R para Control Estadístico de Calidad",
+    description: "Desarrollo de una librería orientada a objetos (OOP) en R para el control estadístico de calidad. Facilita la implementación y análisis de métodos estadísticos para el control de calidad siguiendo estándares internacionales.",
+    link: "https://example.com/libreria-r-calidad",
+    github: "https://github.com/manniealfaro/libreria-r-calidad",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
+  }
+
+]
+---
+{
+    PROJECTS.map(proj => (
+        <article class="mb-10">
+            <h3 class="tet-2xl font-semibold text-yellow-200 mb-2">{proj.title}</h3>
+            <p class="text-lg text-pretty mb-4">{proj.description}</p>
+            <ul class="flex gap-x-4 flex-row mb-3">
+                {proj.tags.map(tag => (
+                    <li>
+                        <span class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                            <tag.icon class="size-4 lg:size-6"></tag.icon>
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+             class="rounded shadow-2xl shadow-white/20"
+             src={proj.image} 
+             alt={`Captura depantalla del proyecto ${proj.title}`} />
+        </article>
+    ))
+}

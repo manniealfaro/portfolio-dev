@@ -1,0 +1,47 @@
+---
+import type { ACTION_ERROR_CODES, ACTION_QUERY_PARAMS } from "astro:actions"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCIE = [
+{
+  date: "Junio 2021 - Actualidad",
+  title: "Software Specialist",
+  company: "Helicopters",
+  description: "Especialista en arquitectura orientada a servicios (SOA) y .NET Core. Trabajo en proyectos complejos relacionados con la ingeniería de software, aplicando patrones de diseño y buenas prácticas para el desarrollo de soluciones robustas y escalables.",
+  link: "https://www.airbus.com/helicopters.html"
+},
+{
+  date: "Marzo 2021 - Mayo 2021",
+  title: "Web Development Intern",
+  company: "Nextt & Tech",
+  description: "Realicé prácticas en desarrollo web, participando en la creación y mantenimiento de aplicaciones web, y colaborando en la implementación de soluciones basadas en las necesidades del cliente.",
+  link: "https://www.nextttech.com"
+},
+{
+  date: "Octubre 2019 - Marzo 2020",
+  title: "Web Development Intern",
+  company: "Helicopters",
+  description: "Desarrollé y mantuve aplicaciones web utilizando arquitectura orientada a servicios (SOA) y .NET Core. Fui parte del equipo que implementó soluciones tecnológicas para mejorar la eficiencia en el entorno empresarial.",
+  link: "https://www.airbus.com/helicopters.html"
+},
+{
+  date: "Junio 2018 - Mayo 2019",
+  title: "Data Scientist",
+  company: "Instituto de Desarrollo Regional de la Universidad de Castilla-La Mancha",
+  description: "Desarrollé plataformas para análisis de datos interactivos y control de calidad, siguiendo especificaciones internacionales. Implementé y mantuve una infraestructura para el lenguaje R y actualicé el paquete SixSigma para mejorar los servicios de análisis de datos.",
+  link: "https://www.uclm.es"
+}
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">    
+    {
+        EXPERIENCIE.map(exp => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...exp}></ExperienceItem>
+            </li>
+        ))
+    }              
+    
+</ol>
+

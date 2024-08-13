@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedIn from '../icons/LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHub from '../icons/GitHub.astro';
+import Mail from '../icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import BriefCase from '../icons/BriefCase.astro';
+import Footer from '../components/Footer.astro';
+import CodeIcon from '../icons/CodeIcon.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Portfolio de Manu - Desarrollador y Programador Web con +3 años de experiencia"
+	description='Contrata a Manu para desarrollar una solución web a medida para tu negocio. Desarrollador y Programador Web con +3 años de experiencia'>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+			<img class="rounded-full w-12 h-12 mb-6" src="https://avatars.githubusercontent.com/u/5214869?v=4" alt="manu logo">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Ey, soy Manu Alfaro! 
+				<a href="https://linkedin.com/in/manuelalfarogarcia" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]"><span>+3 años de experiencia.</span> <span class="text-yellow-200/90">Desarrollador web y deportista! De Albacete, España. </span><span class="opacity-80">Especializado en applicaciones para PYMES!</span></h2>
+
+			<nav class="flex gap-4 my-8 flex-wrap">
+				<SocialPill href="https://linkedin.com/in/manuelalfarogarcia">
+					<LinkedIn class="size-4 md:size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/manniealfaro">
+					<GitHub class="size-4 md:size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:manniealfaro@gmail.com">
+					<Mail class="size-4 md:size-6" />
+					Mail
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCase class="size-7"></BriefCase>
+				Experiencia Laboral
+			</h2>
+			<Experience></Experience>
+		</SectionContainer>
+		<SectionContainer id="Proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"></CodeIcon>
+				Proyectos
+			</h2>
+			<Projects></Projects>
+		</SectionContainer>
+		<Footer>
+			
+		</Footer>
+	</main>
+</Layout>
+
+<style>
+</style>
